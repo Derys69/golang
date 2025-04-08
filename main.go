@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	database.InitDB()
-	r := routes.SetupRouter()
-	r.Run(":8080")
+	database.InitDB()         // koneksi ke database
+	r := routes.SetupRouter() // setup router
+	r.Run(":8080")            // koneksi server pada port 8080
 }

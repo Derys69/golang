@@ -134,6 +134,47 @@ isi raw pada postman dengan format sesuai di gambar
   "telepon": "081234567890"
 }
 ```
+* contoh response jika berhasil 
+```sh
+{
+  "message": "Customer ditambahkan"
+}
+```
 
-### GET Semua Customer
-### GET Semua Customer
+### PUT /customers/{kodecust}
+untuk mengubah data yang sudah tersimpan pada tabel customer
+* contoh costumer
+```sh
+{
+  "kodecust": "C00005",
+  "nama": "SURYANTO",
+  "alamat": "JL. MERDEKA",
+  "kota": "Bogor",
+  "telepon": "081234567890"
+}
+```
+* contoh response jika berhasil 
+```sh
+{
+  "message": "Customer diupdate"
+}
+```
+
+
+### DELETE /customers/{kodecust}
+Menghapus customer sesuai dengan kodecust
+* contoh response jika berhasil 
+```sh
+{
+  "message": "Customer dihapus"
+}
+```
+Status	Error Message	
+400	{"error": "invalid JSON"}	Format input JSON tidak valid
+404	{"error": "Customer tidak ditemukan"}	ID tidak ditemukan
+500	{"error": "SQL error..."}
+| Status  | Error Message | Keterangan |
+| ------------- | ------------- | ------------- |
+| 400 | {"error": "invalid JSON"}  | Format input JSON tidak valid |
+| 404 | {"error": "Customer tidak ditemukan"}  | ID tidak ditemukan |
+| 500 | {"error": "SQL error..."}  | Masalah query/koneksi database |

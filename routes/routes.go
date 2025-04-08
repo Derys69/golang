@@ -11,11 +11,11 @@ func SetupRouter() *gin.Engine {
 
 	customer := r.Group("/customers")
 	{
-		customer.GET("/", handlers.GetCustomers)
-		customer.GET("/:id", handlers.GetCustomerByID)
-		customer.POST("/", handlers.CreateCustomer)
-		customer.PUT("/:id", handlers.UpdateCustomer)
-		customer.DELETE("/:id", handlers.DeleteCustomer)
+		customer.GET("/", handlers.GetCustomers)         // Ambil semua customer
+		customer.GET("/:id", handlers.GetCustomerByID)   // Ambil customer berdasarkan ID
+		customer.POST("/", handlers.CreateCustomer)      // Tambah customer baru
+		customer.PUT("/:id", handlers.UpdateCustomer)    // Update data customer
+		customer.DELETE("/:id", handlers.DeleteCustomer) // Hapus customer
 	}
 
 	return r
