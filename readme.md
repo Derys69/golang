@@ -169,10 +169,7 @@ Menghapus customer sesuai dengan kodecust
   "message": "Customer dihapus"
 }
 ```
-Status	Error Message	
-400	{"error": "invalid JSON"}	Format input JSON tidak valid
-404	{"error": "Customer tidak ditemukan"}	ID tidak ditemukan
-500	{"error": "SQL error..."}
+## Error Message
 | Status  | Error Message | Keterangan |
 | ------------- | ------------- | ------------- |
 | 400 | {"error": "invalid JSON"}  | Format input JSON tidak valid |
